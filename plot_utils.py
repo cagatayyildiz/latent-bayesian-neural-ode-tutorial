@@ -148,7 +148,7 @@ def plot_vdp_animation(t,X,ode_rhs):
         h3.set_data(X[0,:(i+1)*5,0],X[0,:(i+1)*5,1])
         h4.set_data(t[:(i+1)*5],X[0,:(i+1)*5,0])
         h5.set_data(t[:(i+1)*5],X[0,:(i+1)*5,1])
-        ax1.set_title('State trajectory until t={:.2f}'.format(t[i].item()), fontsize=17)
+        ax1.set_title('State trajectory until t={:.2f}'.format(5*t[i].item()), fontsize=17)
         return (h3,h4,h5,)
     anim = animation.FuncAnimation(fig, animate, frames=100, interval=100, blit=True)
     plt.close()
